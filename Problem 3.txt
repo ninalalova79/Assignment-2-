@@ -1,0 +1,17 @@
+countCoins(amount, denomination)
+let currentAmount := amount
+let coinCount := 0
+while (currentAmount >= denomination)
+coinCount := coinCount + 1
+currentAmount := currentAmount – denomination
+return coinCount
+makeChange(amount)
+let currentAmount := amount
+let quarters := countCoins(currentAmount, 25)
+currentAmount := currentAmount – (25 ! quarters)
+let dimes := countCoins(currentAmount, 10)
+currentAmount := currentAmount – (10 ! dimes)
+let nickels := countCoins(currentAmount, 5)
+currentAmount := currentAmount – (5 ! nickels)
+let pennies := countCoins(currentAmount, 1)
+return [quarters, dimes, nickels, pennies]

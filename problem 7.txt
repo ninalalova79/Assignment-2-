@@ -1,0 +1,11 @@
+1	h_age = int(input("Input a dog's age in human years: "))
+2	
+3	if h_age < 0:
+4	    print("Age must be positive number.")
+5	    exit()
+6	elif h_age <= 2:
+7	    d_age = h_age * 10.5
+8	else:
+9	    d_age = 21 + (h_age - 2)*4
+10	
+11	print("The dog's age in dog's years is", d_age)
